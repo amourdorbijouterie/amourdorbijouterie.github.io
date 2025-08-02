@@ -1,0 +1,1054 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amour d'OR - Bijouterie de luxe au Bénin. Découvrez notre histoire, nos valeurs et notre engagement envers l'excellence artisanale.">
+    <title>À Propos - Amour d'OR - Bijouterie de Luxe au Bénin</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="bijouterie, or, artisanat, histoire, artisans, Cotonou, Bénin, joaillerie, tradition">
+    <meta name="author" content="Amour d'OR">
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+            overflow-x: hidden;
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #1a1a1a;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: #1a1a1a;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #555;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            color: #D4AF37;
+            font-size: 1.5rem;
+        }
+        
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        
+        .logo h1 span {
+            color: #D4AF37;
+        }
+        
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .main-nav a:hover, .main-nav a.active {
+            color: #D4AF37;
+        }
+        
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        
+        .main-nav a:hover::after, .main-nav a.active::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            background-color: #1a1a1a;
+            z-index: 1001;
+            transition: left 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .close-menu {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            text-align: right;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .mobile-nav a {
+            display: block;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: background-color 0.3s ease;
+        }
+        
+        .mobile-nav a:hover {
+            background-color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1600x800/1a1a1a/white?text=À+Propos+Amour+d%27OR') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #D4AF37;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            color: #666;
+        }
+        
+        .about-content {
+            padding: 5rem 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .about-img img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .values h3 {
+            margin: 1.5rem 0 1rem;
+            color: #1a1a1a;
+        }
+        
+        .values ul {
+            list-style: none;
+        }
+        
+        .values li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .values li i {
+            color: #D4AF37;
+        }
+        
+        .testimonials {
+            padding: 5rem 0;
+            background-color: #f5f5f5;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            background: #f8f8f8;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #D4AF37;
+        }
+        
+        .stars {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-author {
+            margin-top: 1.5rem;
+            text-align: right;
+        }
+        
+        .testimonial-author h4 {
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-author p {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn.primary-btn {
+            background-color: #D4AF37;
+            color: white;
+        }
+        
+        .btn.primary-btn:hover {
+            background-color: #c49f27;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background-color: white;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+        
+        .cart-sidebar.open {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .cart-header h3 {
+            margin: 0;
+            color: #1a1a1a;
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            color: #999;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-cart:hover {
+            color: #D4AF37;
+        }
+        
+        .cart-items {
+            padding: 1.5rem;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+        
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .cart-item-details h4 {
+            margin: 0 0 0.5rem 0;
+            color: #1a1a1a;
+        }
+        
+        .cart-item-price {
+            font-weight: 600;
+            color: #D4AF37;
+        }
+        
+        .empty-cart {
+            text-align: center;
+            color: #999;
+            font-style: italic;
+            margin: 2rem 0;
+        }
+        
+        .cart-total {
+            padding: 1.5rem;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .cart-total h4 {
+            margin: 0;
+            text-align: right;
+            font-size: 1.25rem;
+            color: #1a1a1a;
+        }
+        
+        .cart-total span {
+            color: #D4AF37;
+            font-weight: 700;
+        }
+        
+        .cart-actions {
+            padding: 1.5rem;
+        }
+        
+        .cart-actions .btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h3 {
+            color: #D4AF37;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col ul li a:hover {
+            color: #D4AF37;
+        }
+        
+        .footer-col p {
+            color: #ccc;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-links a {
+            color: #D4AF37;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .about-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cart-sidebar {
+                width: 350px;
+                right: -350px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+            
+            .logo h1 {
+                font-size: 1.5rem;
+            }
+            
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cart-sidebar {
+                width: 100vw;
+                right: -100vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content for accessibility -->
+    <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-gem logo-icon" aria-hidden="true"></i>
+                <h1>Amour d'<span>OR</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Ouvrir le menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav class="main-nav" role="navigation">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="about.html" class="nav-link active">À Propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" role="dialog" aria-label="Menu mobile">
+        <button class="close-menu" aria-label="Fermer le menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <nav class="mobile-nav" role="navigation">
+            <ul>
+                <li><a href="about.html" class="nav-link active">À Propos</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner">
+            <div class="hero-content">
+                <h1>Notre Histoire d'Amour avec l'Or</h1>
+                <!-- <p>Depuis 1985, nous transformons l'or en émotions, créant des bijoux qui racontent des histoires uniques</p> -->
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="about-content" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img">
+                        <img src="https://placehold.co/600x400/1a1a1a/white?text=Atelier+Amour+d%27OR" alt="Atelier de bijouterie Amour d'OR à Cotonou" loading="lazy">
+                    </div>
+                    <div class="about-text">
+                        <h2>À Propos de Amour d'OR</h2>
+                        <p>BIENVENUE CHEZ LA BIJOUTERIE AMOUR D'OR 🫅
+                            ▪Veuillez noter que notre Bijoutiers est situé à Cotonou plus précisément à Menontin juste à côté de la pharmacie kindonou 🏥 . ou tapé dans « Google Maps » AMOUR D'OR BIJOUTERIE et vous suivez l’indication qui vous amènera à nous. Au plaisir  de vous recevoir dans notre BIJOUTIERS😋.
+                            Visitez notre catalogue 
+                            </p>
+                        <!-- <p>Chaque bijou est conçu et fabriqué à la main dans notre atelier à Cotonou, où nos artisans passionnés transforment l'or 18 carats en œuvres d'art uniques. Nous sélectionnons méticuleusement chaque pierre précieuse et chaque détail pour garantir une qualité irréprochable.</p> -->
+                        <!-- <p>Notre engagement : offrir à nos clients des bijoux qui transcendent le temps, symboles d'émotions authentiques et de moments précieux. Nous croyons que chaque pièce mérite une histoire, et nous sommes honorés de faire partie de celles que nos clients choisissent de vivre.</p> -->
+                        <div class="values">
+                            <h3>Nos Valeurs</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Excellence artisanale</li>
+                                <li><i class="fas fa-check"></i> Qualité irréprochable</li>
+                                <li><i class="fas fa-check"></i> Engagement éthique</li>
+                                <li><i class="fas fa-check"></i> Service personnalisé</li>
+                                <li><i class="fas fa-check"></i> Authenticité béninoise</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Témoignages de Nos Clients</h2>
+                    <p>Découvrez ce que nos clients disent de leur expérience avec Amour d'OR</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"L'alliance que j'ai commandée pour mon mariage est absolument magnifique. La qualité de l'or et le travail artisanal sont exceptionnels. Un souvenir éternel de notre amour."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Marie C.</h4>
+                            <p>Cotonou, Bénin</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"J'ai offert un collier personnalisé à ma femme pour notre anniversaire de mariage. Son émotion en découvrant cette pièce unique a été inoubliable. Merci pour votre excellence."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>David K.</h4>
+                            <p>Porto-Novo, Bénin</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"Le service client d'Amour d'OR est remarquable. Ils ont su m'accompagner dans le choix du bijou parfait pour demander ma fiancée en mariage. Une expérience inoubliable."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Sophie L.</h4>
+                            <p>Parakou, Bénin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Votre Panier</h3>
+            <button class="close-cart" aria-label="Fermer le panier">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty-cart">Votre panier est vide</p>
+        </div>
+        <div class="cart-total">
+            <h4>Total: <span id="cart-total">0,00 €</span></h4>
+        </div>
+        <div class="cart-actions">
+            <button class="btn primary-btn" id="whatsapp-order">
+                Commander via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/22997000000" class="whatsapp-float" target="_blank" aria-label="Contacter via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <i class="fas fa-gem logo-icon" aria-hidden="true"></i>
+                        <h2>Amour d'<span>OR</span></h2>
+                    </div>
+                    <p>Depuis 1985, nous créons des bijoux en or d'exception à Cotonou, Bénin. Des pièces uniques qui racontent des histoires d'amour, de réussite et de fierté.</p>
+                    <div class="social-links">
+                        <!-- <a href="https://instagram.com/amourdor.bj" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a> -->
+                        <a href="https://www.facebook.com/share/1Am3R5FpjJ/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@naziifbijoutier?_t=ZM-8yWe1Wgg9cU&_r=1" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/22997000000" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="about.html" class="active">À Propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Catalogue</h3>
+                    <ul>
+                        <li><a href="#bagues">Bagues & Alliances</a></li>
+                        <li><a href="#colliers">Colliers & Pendentifs</a></li>
+                        <li><a href="#bracelets">Bracelets</a></li>
+                        <li><a href="#boucles">Boucles d'Oreilles</a></li>
+                        <li><a href="#personnalises">Bijoux Personnalisés</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Nous somme à Ménontin juste à côté de la pharmacie KINDONOU, Cotonou, Bénin</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+22997000000">+229 61311421</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:amourdor12@gmail.com">amourdor12@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> 8h à 21h De lundi au samedi 
+                            Dimanches sur RDV</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> Amour d'OR. Tous droits réservés. Bijouterie de luxe à Cotonou, Bénin.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const cartSidebar = document.getElementById('cart-sidebar');
+        const closeCartBtn = document.querySelector('.close-cart');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+        const whatsappOrderBtn = document.getElementById('whatsapp-order');
+        const addToCartBtns = document.querySelectorAll('.add-to-cart');
+        const emptyCartMsg = document.createElement('p');
+
+        // Initialize cart
+        let cart = [];
+        emptyCartMsg.className = 'empty-cart';
+        emptyCartMsg.textContent = 'Votre panier est vide';
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Navigation
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Shopping Cart
+        // Open cart sidebar
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('add-to-cart') || 
+                e.target.closest('.add-to-cart')) {
+                const addBtn = e.target.classList.contains('add-to-cart') ? 
+                    e.target : e.target.closest('.add-to-cart');
+                
+                e.preventDefault();
+                openCartSidebar();
+                
+                const product = addBtn.getAttribute('data-product');
+                const price = parseInt(addBtn.getAttribute('data-price'));
+                const imgElement = addBtn.closest('.product-card')?.querySelector('img');
+                const image = imgElement ? imgElement.src : '';
+                
+                // Check if product already in cart
+                const existingItem = cart.find(item => item.product === product);
+                
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        product: product,
+                        price: price,
+                        quantity: 1,
+                        image: image
+                    });
+                }
+                
+                updateCartDisplay();
+                showNotification(`${product} ajouté au panier`);
+            }
+        });
+
+        // Close cart sidebar
+        closeCartBtn.addEventListener('click', () => {
+            closeCartSidebar();
+        });
+
+        // Close cart when clicking outside
+        document.addEventListener('click', (e) => {
+            if (cartSidebar.classList.contains('open') && 
+                !cartSidebar.contains(e.target) && 
+                !e.target.classList.contains('add-to-cart') && 
+                !e.target.closest('.add-to-cart')) {
+                closeCartSidebar();
+            }
+        });
+
+        // Open cart sidebar
+        function openCartSidebar() {
+            cartSidebar.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            updateCartDisplay();
+        }
+
+        // Close cart sidebar
+        function closeCartSidebar() {
+            cartSidebar.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        // Update cart display
+        function updateCartDisplay() {
+            cartItems.innerHTML = '';
+            
+            if (cart.length === 0) {
+                cartItems.appendChild(emptyCartMsg);
+                cartTotal.textContent = '0,00 €';
+                whatsappOrderBtn.style.display = 'none';
+                return;
+            }
+            
+            whatsappOrderBtn.style.display = 'block';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.product}">
+                    <div class="cart-item-details">
+                        <h4>${item.product}</h4>
+                        <p>Quantité: ${item.quantity}</p>
+                        <p class="cart-item-price">${itemTotal.toLocaleString()} €</p>
+                    </div>
+                    <button class="remove-item" data-index="${index}">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                
+                cartItems.appendChild(cartItem);
+            });
+            
+            cartTotal.textContent = `${total.toLocaleString()} €`;
+            
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-item').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const index = parseInt(e.target.closest('.remove-item').getAttribute('data-index'));
+                    cart.splice(index, 1);
+                    updateCartDisplay();
+                    
+                    if (cart.length === 0) {
+                        closeCartSidebar();
+                    }
+                });
+            });
+        }
+
+        // WhatsApp Order
+        whatsappOrderBtn.addEventListener('click', () => {
+            if (cart.length === 0) return;
+            
+            let message = 'Bonjour, je souhaite commander les articles suivants :\\n\\n';
+            
+            cart.forEach(item => {
+                message += `• ${item.product} - ${item.quantity} x ${item.price.toLocaleString()} €\\n`;
+            });
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            message += `\\nTotal: ${total.toLocaleString()} €\\n\\n`;
+            message += 'Veuillez me confirmer la disponibilité et les modalités de livraison. Merci !';
+            
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/22997000000?text=${encodedMessage}`, '_blank');
+        });
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            
+            Object.assign(notification.style, {
+                position: 'fixed',
+                top: '20px',
+                right: '20px',
+                backgroundColor: '#D4AF37',
+                color: 'white',
+                padding: '15px 20px',
+                borderRadius: '5px',
+                boxShadow: '0 5px 15px rgba(0, 0, 0, 0.2)',
+                zIndex: '9999',
+                transform: 'translateX(100%)',
+                transition: 'transform 0.3s ease'
+            });
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 3000);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize cart display
+            updateCartDisplay();
+            
+            // Update year in footer
+            const yearSpan = document.getElementById('current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
